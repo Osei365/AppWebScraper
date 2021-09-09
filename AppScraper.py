@@ -69,7 +69,7 @@ def AppScraper(filename, sheetname, URL):
     top_categories = driver.find_elements_by_xpath("//ul[@class='appx-categories-top-ul']//a")
 
     # Iterate through top categories to get all apps for each category
-    for top_category in top_categories[]:
+    for top_category in top_categories:
         top_cat_link = top_category.get_attribute('href')
 
         # Make a request for the category in question
